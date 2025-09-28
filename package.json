@@ -1,0 +1,22 @@
+{
+  "name": "next-mvc-template-cli",
+  "version": "1.0.0",
+  "description": "This is a command line application that helps to create MVC structure for NextJS projects.",
+  "main": "index.js",
+  "bin": {
+    "next-mvc": "index.js"
+  },
+  "engines": {
+    "node": ">=20.x"
+  },
+  "scripts": {
+    "dev": "npx nodemon -x npm start",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "@gustavomont",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
