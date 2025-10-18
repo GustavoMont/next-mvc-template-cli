@@ -11,12 +11,18 @@
   },
   "scripts": {
     "dev": "npx nodemon -x npm start",
-    "start": "node index.js"
+    "start": "node index.js",
+    "lint:eslint:check": "npx eslint .",
+    "lint:eslint:write": "npx eslint . --fix"
   },
   "keywords": [],
   "author": "@gustavomont",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.38.0",
+    "eslint": "^9.38.0",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^16.4.0",
     "nodemon": "^3.1.10"
   }
 }
