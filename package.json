@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is a command line application that helps to create MVC structure for NextJS projects.",
   "main": "index.js",
+  "type": "module",
   "bin": {
     "next-mvc": "index.js"
   },
@@ -21,6 +22,8 @@
   "author": "@gustavomont",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@eslint/js": "^9.38.0",
     "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
