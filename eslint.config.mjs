@@ -1,11 +1,12 @@
 import importPlugin from "eslint-plugin-import";
 import js from "@eslint/js";
 import globals from "globals";
-
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 // eslint-disable-next-line import/no-unresolved
 import { defineConfig } from "eslint/config";
 
 export default defineConfig([
+  eslintConfigPrettier,
   {
     files: ["**/*.{js,mjs,cjs}"],
     plugins: { js, importPlugin },
