@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is a command line application that helps to create MVC structure for NextJS projects.",
   "main": "index.js",
+  "type": "module",
   "bin": {
     "next-mvc": "index.js"
   },
@@ -11,12 +12,31 @@
   },
   "scripts": {
     "dev": "npx nodemon -x npm start",
-    "start": "node index.js"
+    "start": "node index.js",
+    "lint:eslint:check": "npx eslint .",
+    "lint:eslint:write": "npx eslint . --fix",
+    "lint:prettier:check": "npx prettier . --check",
+    "lint:prettier:fix": "npx prettier . --write",
+    "commit": "cz"
   },
   "keywords": [],
   "author": "@gustavomont",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@eslint/js": "^9.38.0",
+    "commitizen": "^4.3.1",
+    "eslint": "^9.38.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^16.4.0",
+    "nodemon": "^3.1.10",
+    "prettier": "3.6.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
