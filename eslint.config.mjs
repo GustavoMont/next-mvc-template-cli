@@ -4,6 +4,7 @@ import globals from "globals";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 // eslint-disable-next-line import/no-unresolved
 import { defineConfig } from "eslint/config";
+import jest from "eslint-plugin-jest";
 
 export default defineConfig([
   eslintConfigPrettier,
@@ -24,5 +25,14 @@ export default defineConfig([
       ...importPlugin.flatConfigs.recommended.rules,
       "import/no-anonymous-default-export": ["warn"],
     },
+  },
+  {
+    files: ["**/*.test.js"],
+    ...jest.configs["flat/recommended"],
+    rules: {
+      ...jest.configs["flat/recommended"].rules,
+      "jest/prefer-expect-assertions": "off",
+    },
+    languageOptions: { globals: jest.environments.globals.globals },
   },
 ]);
