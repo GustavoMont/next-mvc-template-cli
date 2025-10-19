@@ -25,6 +25,14 @@ export default defineConfig([
       ...importPlugin.flatConfigs.recommended.rules,
       "import/no-anonymous-default-export": ["warn"],
     },
+    settings: {
+      "import/resolver": {
+        node: {
+          extensions: [".js"],
+          moduleDirectory: ["node_modules", "."],
+        },
+      },
+    },
   },
   {
     files: ["**/*.test.js"],
