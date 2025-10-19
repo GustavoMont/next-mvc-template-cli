@@ -1,4 +1,4 @@
-import calculator from "models/calculator";
+import calculator from "models/calculator.js";
 
 describe("Calculator", () => {
   describe("sum", () => {
