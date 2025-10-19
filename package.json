@@ -19,7 +19,8 @@
     "lint:eslint:write": "npx eslint . --fix",
     "lint:prettier:check": "npx prettier . --check",
     "lint:prettier:fix": "npx prettier . --write",
-    "commit": "cz"
+    "commit": "cz",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "@gustavomont",
@@ -37,6 +38,7 @@
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jest": "^28.14.0",
     "globals": "^16.4.0",
+    "husky": "^9.1.7",
     "jest": "^30.2.0",
     "nodemon": "^3.1.10",
     "prettier": "3.6.2"
