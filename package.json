@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "bin": {
-    "next-mvc": "index.js"
+    "next-mvc": "./bin/index.js"
   },
   "engines": {
     "node": ">=20.x"
@@ -47,5 +47,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "yargs": "^17.7.2"
   }
 }
