@@ -1,5 +1,11 @@
 function sum(...numbers) {
-  return numbers.reduce((total, currentNumber) => total + currentNumber, 0);
+  numbers = numbers.map(Number);
+  if (numbers.some((num) => isNaN(num))) {
+    console.error("❌ Digite apenas números");
+    return;
+  }
+
+  return numbers.reduce((sum, currentNumber) => sum + currentNumber, 0);
 }
 
 const calculator = {
