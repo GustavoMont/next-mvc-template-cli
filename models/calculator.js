@@ -1,7 +1,5 @@
 function sum(...numbers) {
   numbers = numbers.map(Number);
-  console.log({ numbers });
-
   if (numbers.some((num) => isNaN(num))) {
     console.error("❌ Digite apenas números");
     return;

@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test:watch": "jest --watchAll",
-    "test": "jest",
+    "test": "npm link && jest",
     "dev": "npx nodemon -x npm start",
     "start": "node index.js",
     "lint:eslint:check": "npx eslint .",
